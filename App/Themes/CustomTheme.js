@@ -12,6 +12,9 @@ export default {
     },
     radius: {
       "super-xl": 120
+    },
+    color: {
+      default: "#f9bc15"
     }
   },
   font: {
