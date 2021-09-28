@@ -152,3 +152,5 @@ The `.env` file is ignored by git keeping those secrets out of your repo.
 2. Add your config variables
 3. Follow instructions at [https://github.com/luggit/react-native-config#setup](https://github.com/luggit/react-native-config#setup)
 4. Done!
+
+![screenshots1](dist/photo6239869058069671128.jpg)
