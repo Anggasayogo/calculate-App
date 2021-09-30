@@ -101,20 +101,38 @@ const LaunchScreen = props => {
           }
           break;
         case 'reset':
-          setChceked([])
-          break;
-        default:
+          setSumarry('')
+          setValuesInput('')
+          setValuesInputOne('')
+          setValuesInputTwo('')
           setChceked([])
           break;
       }
     }
+  }
+
+  const devautValue = (item) => {
+      switch (item) {
+        case 0:
+          return values
+          break;
+        case 1:
+          return valuesOne
+          break;
+        case 2:
+          return valuesTwo
+          break;
+        default:
+          return values
+          break;
+      }
   }
   
   const InputRendered = (item) => {
     return(
       <View style={apply("row items-center")}>
         <View style={apply("my-2 flex")}>
-          <InputText keyboardType="number-pad" onChangeText={(val)=> setValues(val, item)}/>
+          <InputText value={devautValue(item)} keyboardType="number-pad" onChangeText={(val)=> setValues(val, item)}/>
         </View>
         <Button
           onPress={()=> hanldeSelected(item)} 
