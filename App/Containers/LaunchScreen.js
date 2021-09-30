@@ -57,10 +57,42 @@ const LaunchScreen = props => {
       console.tron.log(checked.includes(0) && checked.includes(1) && checked.includes(2))
       switch (val) {
         case '+':
+          if(checked.includes(0) && checked.includes(1) && checked.includes(2)){
             setSumarry(Number(values) + Number(valuesOne) + Number(valuesTwo))
+          }else if(checked.includes(0) && checked.includes(1)){
+            setSumarry(Number(values) + Number(valuesOne))
+          }else if(checked.includes(0) && checked.includes(2)){
+            setSumarry(Number(values) + Number(valuesTwo))
+          }else if(checked.includes(1) && checked.includes(0)){
+            setSumarry(Number(valuesOne) + Number(values))
+          }else if(checked.includes(1) && checked.includes(2)){
+            setSumarry(Number(valuesOne) + Number(valuesTwo))
+          }else if(checked.includes(2) && checked.includes(0)){
+            setSumarry(Number(valuesTwo) + Number(values))
+          }else if(checked.includes(2) && checked.includes(1)){
+            setSumarry(Number(valuesTwo) + Number(valuesOne))
+          }else{
+            setChceked([])
+          }
           break;
         case '-':
+            if(checked.includes(0) && checked.includes(1) && checked.includes(2)){
             setSumarry(Number(values) - Number(valuesOne) - Number(valuesTwo))
+          }else if(checked.includes(0) && checked.includes(1)){
+            setSumarry(Number(values) - Number(valuesOne))
+          }else if(checked.includes(0) && checked.includes(2)){
+            setSumarry(Number(values) - Number(valuesTwo))
+          }else if(checked.includes(1) && checked.includes(0)){
+            setSumarry(Number(valuesOne) - Number(values))
+          }else if(checked.includes(1) && checked.includes(2)){
+            setSumarry(Number(valuesOne) - Number(valuesTwo))
+          }else if(checked.includes(2) && checked.includes(0)){
+            setSumarry(Number(valuesTwo) - Number(values))
+          }else if(checked.includes(2) && checked.includes(1)){
+            setSumarry(Number(valuesTwo) - Number(valuesOne))
+          }else{
+            setChceked([])
+          }
           break;
         case '*':
           if(checked.includes(0) && checked.includes(1) && checked.includes(2)){
