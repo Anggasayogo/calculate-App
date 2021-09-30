@@ -54,7 +54,6 @@ const LaunchScreen = props => {
     if(checked?.length == 1 || checked?.length == 0){
       alert("Please Select Minimum 2")
     }else{
-      console.tron.log(checked.includes(0) && checked.includes(1) && checked.includes(2))
       switch (val) {
         case '+':
           if(checked.includes(0) && checked.includes(1) && checked.includes(2)){
